@@ -1,0 +1,153 @@
+/* overall page theme */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* navigation bar theme */
+.navibar {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    background-color: rgb(0, 162, 255); 
+    color: #fff;
+    padding: 15px;
+}
+
+.logo {
+    margin: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.search input {
+    width: 250px;
+    padding: 10px;
+    margin-top: 2px;
+}
+
+.section ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.section li {
+    cursor: pointer;
+    display: inline;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* starting from here is the whole css for each movie boxes */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* created this container section to keep every content in it at bay */
+.containers {
+    display: flex;
+    justify-content: center; 
+}
+
+h1 {
+    font-size: 25px;
+}
+
+.left-line { /* this is specifically only for the avengers box */
+    width: 40%; 
+    float: left;
+    box-sizing: border-box;
+}
+
+.avgs-section {
+    width: 100%;
+    padding-bottom: 50px;
+
+}
+
+/*this box highlights all the movie boxes and to be arranged in a proper manner */
+.mov-box { 
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mov-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.right-line { /* everthing on the right line is the rest of movies */
+    width: 30%; 
+    float: left;
+    box-sizing: border-box;
+    padding: 0 18px; 
+}
+
+.rows {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.four-frames { /* assigned specifcally to the 4 movie boxes */
+    width: 48%;
+    box-sizing: border-box;
+    margin-bottom: 18px;
+}
+
+/* the css for the info boxes on both left and right lines */
+.info {
+    padding: 10px 20px;
+    background-color: rgb(0, 152, 240);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+
+}
+
+.info1 {
+    padding: 10px 20px;
+    background-color: rgb(0, 152, 240);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+
+

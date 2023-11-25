@@ -1,0 +1,167 @@
+$bar-1-color: #4e89ae;
+$bar-2-color: #43658b;    /* these are the colors of each bars in the line section */
+$bar-3-color: #ed6663;
+$bar-4-color: #ffa372;
+$circle-1-width: 70px;
+$circle-1-height: 70px;
+$circle-2-width: 80px;    
+$circle-2-height: 80px;     /* while these are the width and length for each circle */
+$circle-3-width: 90px;
+$circle-3-height: 90px;
+$circle-4-width: 100px;
+$circle-4-height: 100px;
+$circle-hover-color: #444;    /* and this is the hover highlighter color for both the bars and circles */
+$footer-height: 50px;       /* and this is the footers height */
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+
+header {
+  background-color: #8ccff7;
+}
+
+@mixin centerElement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin image-size($url, $width, $height) {
+  background-image: url($url);
+  width: $width;
+  height: $height;
+}
+
+.lines { /* the whole lines template */
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 4;
+}
+
+#bar1,
+#bar2,
+#bar3,
+#bar4 { /* each bars has the same size */
+  height: 52px;
+
+  .circles { /* everything here consists of the different sizes of the circles */
+    @include centerElement;
+    margin: 30px;
+    gap: 16px;
+  }
+
+  #circle1 {
+    width: $circle-1-width;
+    height: $circle-1-height;
+  }
+
+  #circle2 {
+    width: $circle-2-width;
+    height: $circle-2-height;
+  }
+
+  #circle3 {
+    width: $circle-3-width;
+    height: $circle-3-height;
+  }
+
+  #circle4 {
+    width: $circle-4-width;
+    height: $circle-4-height;
+  }
+
+  #bar1,
+  #circle1 { /*background colors for both the bars and the circles */
+    background-color: $Line-1-color;
+  }
+
+  #bar2,
+  #circle2 {
+    background-color: $Line-2-color;
+  }
+
+  #Line3,
+  #circle3 {
+    background-color: $Line-3-color;
+  }
+
+  #bar4,
+  #circle4 {
+    background-color: $Line-4-color;
+  }
+
+  .circles div {
+    border-radius: 50%;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+footer {
+  background-color: #8ccff7;
+}
+
+#bar1:hover,
+#bar2:hover,
+#bar3:hover,
+#bar4:hover,
+#circle1:hover,
+#circle2:hover,
+#circle3:hover,
+#circle4:hover { /* the hover highlight function for both the circle and the bars */
+  background-color: $circle-hover-color;
+  color: $circle-hover-color;
+}
+
+footer {
+  width: 100%;
+  height: $footer-height;
+  bottom: 0;
+}
+
+@media (min-width: 801px) {  /* sizing for desktops */
+  .Large {
+    @include image-size("400px.png", 400px, 400px);
+  }
+
+  .box {
+    background-color: #8ccff7;
+    @include centerElement;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 768px) { /* sizing for tablets */
+  .Medium {
+    @include image-size("300px.png", 300px, 300px);
+  }
+
+  .box {
+    background-color: #8ccff7;
+    @include centerElement;
+  }
+
+  .circles {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) { /* sizing for mobile phones */
+  .Small {
+    @include image-size("200px.png", 200px, 200px);
+  }
+
+  .box {
+    background-color: #8ccff7;
+    @include centerElement;
+  }
+
+  .circles {
+    flex-direction: column;
+  }
+}

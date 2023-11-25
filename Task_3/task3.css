@@ -1,0 +1,149 @@
+/* These are the circle width & height and line color */
+body {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+
+header {
+  background-color: #8ccff7;
+}
+
+.lines { /* the whole lines template */
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 4;
+}
+
+#bar1,
+#bar2,
+#bar3,
+#bar4 { /* each bars has the same size */
+  height: 52px;
+}
+
+.circles { /* everything here consists of the different sizes of the circles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  gap: 16px;
+}
+
+#circle1 {
+  width: 70px;
+  height: 70px;
+}
+
+#circle2 {
+  width: 80px;
+  height: 80px;
+}
+
+#circle3 {
+  width: 90px;
+  height: 90px;
+}
+
+#circle4 {
+  width: 100px;
+  height: 100px;
+}
+
+#bar1,
+#circle1 { /*background colors for both the bars and the circles */
+  background-color: #4e89ae;
+}
+
+#bar2,
+#circle2 {
+  background-color: #43658b;
+}
+
+#bar3,
+#circle3 {
+  background-color: #ed6663;
+}
+
+#bar4,
+#circle4 {
+  background-color: #ffa372;
+}
+
+.circles div {
+  border-radius: 50%;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+footer {
+  background-color: #8ccff7;
+}
+
+#bar1:hover,
+#bar2:hover,
+#bar3:hover,
+#bar4:hover,
+#circle1:hover,
+#circle2:hover,
+#circle3:hover,
+#circle4:hover { /* the hover highlight function for both the circle and the bars */
+  background-color: #444;
+  color: #444;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+}
+
+@media (min-width: 801px) { /* sizing for desktops */
+  .large {
+    background-image: url("400px.png");
+    width: 400px;
+    height: 400px;
+  }
+  .box {
+    background-color: #8ccff7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 800px) and (min-width: 768px) { /* sizing for tablets */
+  .medium {
+    background-image: url("300px.png");
+    width: 300px;
+    height: 300px;
+  }
+  .box {
+    background-color: #8ccff7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circles {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) { /* sizing for mobile phones */
+  .small {
+    background-image: url("200px.png");
+    width: 200px;
+    height: 200px;
+  }
+  .box {
+    background-color: #8ccff7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circles {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=task3.css.map */

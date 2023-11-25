@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task2.css">
+    <title>Task_2</title>
+</head>
+
+<!--all contents will be shown here-->
+
+<body>
+    <!--navigation bar and all its content-->
+    <div class="navibar">
+        <p class="logo">What's On</p>
+
+        <div class="search">
+            <input type="text" placeholder="Search..."> <!--created an input to make the nav bar a little responsive-->
+        </div>
+
+        <div class="section">
+            <ul>
+                <li><a href="movies">Movies</a></li>
+                <li><a href="tv">TV</a></li>
+                <li><a href="login">Login</a></li>
+                <li><a href="register">Register</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <div class="containers"> <!--created a div class container which contains all the contents-->
+
+            <!--segregated the avengers movie box from the rest of the movie boxes because it has its own distinct appearance-->
+            <div class="left-line"> <!--left line is specifcally only for the avengers box-->
+
+                <div class="mov-box avgs-section">
+                    <img src="avengers.jpg">
+                    <h1>Avengers - End Game</h1>
+                    <p>With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos's
+                        actions and undo the chaos to the universe, no matter what consequences may be in store, and no
+                        matter who they face... Avenge the fallen.</p>
+
+                    <button class="info">More Info...</button>
+                    <!--both lines have a different "info class" which can be edited in their own way-->
+
+                </div>
+
+            </div>
+
+            <!--everything that is starting here is all of the right lines contents-->
+            <div class="right-line">
+                
+                <!--this rows class allows the boxes to be in place which does not need to be fixed individually-->
+                <div class="rows">
+
+                    <div class="mov-box four-frames">
+                        <img src="lone-gunmen.jpg">
+                        <h1>The Lone Gunmen</h1>
+                        <p>investigate the suspicious death of Byers' father, a top tier government agent, and discover
+                            a top secret plan for a false flag operation to crash a plane into the World Trade Center.
+                        </p>
+
+                        <button class="info1">More Info...</button>
+
+                    </div>
+
+                    <div class="mov-box four-frames">
+                        <img src="predators.jpg">
+                        <h1>Predators</h1>
+                        <p>follows a group of proficient killers who have been abducted and placed on a planet that acts
+                            as a game reserve for two warring tribes of extraterrestrial killers, leading them to try
+                            and survive and look for a way back to Earth.</p>
+
+                        <button class="info1">More Info...</button>
+
+                    </div>
+                </div>
+
+                <div class="rows">
+
+                    <div class="mov-box four-frames">
+                        <img src="millenium.jpg">
+                        <h1>The Millennium Trilogy</h1>
+                        <p>follows an air crash investigator who discovers curiously strange details while investigating
+                            a recent crash. A woman is sent back to his time from the future to try and derail his
+                            investigation before he uncovers their secret.</p>
+
+                        <button class="info1">More Info...</button>
+
+                    </div>
+
+                    <div class="mov-box four-frames">
+                        <img src="rage.jpg">
+                        <h1>Rage</h1>
+                        <p>After a violent home invasion leaves mild-mannered husband Noah (Matt Theo) in a coma and his
+                            wife Madeline (Hayley Beveridge) deeply traumatized, Noah awakens to find out that one of
+                            the attackers is still on the loose.</p>
+
+                        <button class="info1">More Info...</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!--and finally, the footer section-->
+    <footer>
+        <p>Copyright © 2021 What's On</p>
+    </footer>
+</body>
+
+</html>
